@@ -31,8 +31,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -41,7 +41,7 @@ android {
 version = "2.0.0"
 
 dependencies {
-  //  implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.core.ktx)
    // implementation(libs.androidx.appcompat)
     //implementation(libs.material)
    // testImplementation(libs.junit)
@@ -54,8 +54,8 @@ afterEvaluate{
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "com.github.sans16.androidlibrary"
-                artifactId = "androidlibrary"
+                groupId = "com.github.sans"
+                artifactId = "mylibrary"
                 version = "2.0.0"
             }
         }
