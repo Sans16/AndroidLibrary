@@ -53,9 +53,9 @@ afterEvaluate{
         publications {
             create<MavenPublication>("maven") {
                 from(components["release"])
-                groupId = "com.github.sans"
-                artifactId = "mylibrary"
-                version = "1.0"
+                groupId = "com.github.sans16.androidlibrary"
+                artifactId = "androidlibrary"
+                version = "1.0.5"
             }
         }
     }
