@@ -52,10 +52,10 @@ afterEvaluate{
     publishing {
         publications {
             create<MavenPublication>("maven") {
+                from(components["release"])
                 groupId = "com.github.sans"
                 artifactId = "mylibrary"
                 version = "1.0"
-               // from(components["java"])
             }
         }
     }
