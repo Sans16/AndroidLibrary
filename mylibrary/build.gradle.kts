@@ -38,6 +38,7 @@ android {
         jvmTarget = "1.8"
     }
 }
+version = "1.0.0"
 
 dependencies {
   //  implementation(libs.androidx.core.ktx)
@@ -51,11 +52,11 @@ dependencies {
 afterEvaluate{
     publishing {
         publications {
-            create<MavenPublication>("maven") {
+            create<MavenPublication>("release") {
                 from(components["release"])
                 groupId = "com.github.sans16.androidlibrary"
                 artifactId = "androidlibrary"
-                version = "1.0.5"
+                version = "1.0.0"
             }
         }
     }
