@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("maven-publish")
+
     //alias(libs.plugins.maven.library)
 }
 
@@ -52,9 +53,9 @@ afterEvaluate{
         publications {
             create<MavenPublication>("maven") {
                 groupId = "com.github.sans"
-                artifactId = "request-shaker"
+                artifactId = "mylibrary"
                 version = "1.0"
-              //  from(components["java"])
+               // from(components["java"])
             }
         }
     }
