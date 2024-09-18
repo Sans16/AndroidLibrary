@@ -31,8 +31,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -49,14 +49,32 @@ dependencies {
    // androidTestImplementation(libs.androidx.espresso.core)
 }
 
+//publishing {
+//    publications {
+//        register<MavenPublication>("release") {
+//            groupId = "com.github.sans16"
+//            artifactId = "mylibrary"
+//            version = "2.0.0"
+//
+//            afterEvaluate {
+//                from(components["release"])
+//            }
+//        }
+//    }
+//}
+
 afterEvaluate{
     publishing {
         publications {
-            create<MavenPublication>("release") {
+            register<MavenPublication>("release") {
                 from(components["release"])
                 groupId = "com.github.sans"
-                artifactId = "mylibrary"
-                version = "2.0.0"
+                artifactId = "androidlibrary"
+                version = "0.0.1"
+
+                afterEvaluate{
+                    from(components["release"])
+                }
             }
         }
     }
