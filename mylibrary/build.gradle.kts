@@ -67,7 +67,7 @@ afterEvaluate{
     publishing {
         publications {
             register<MavenPublication>("release") {
-                from(components["release"])
+             //   from(components["release"])
                 groupId = "com.github.sans"
                 artifactId = "androidlibrary"
                 version = "0.0.1"
