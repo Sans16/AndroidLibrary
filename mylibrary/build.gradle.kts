@@ -1,6 +1,7 @@
 import com.android.build.gradle.internal.utils.createPublishingInfoForLibrary
 import com.android.utils.TraceUtils.simpleId
 import io.netty.util.ReferenceCountUtil.release
+import org.gradle.kotlin.dsl.support.kotlinCompilerOptions
 
 plugins {
     alias(libs.plugins.android.library)
@@ -38,6 +39,10 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+
+//    composeOptions {
+//        kotlinCompilerExtensionVersion = "1.5.1"
+//    }
 }
 version = "3.0.1"
 
@@ -68,10 +73,10 @@ afterEvaluate{
     publishing {
         publications {
             create<MavenPublication>("release") {
-                from(components["release"])
-                groupId = "com.github.sans16"
-                artifactId = "androidlibrary"
-                version = "3.0.1"
+//                from(components["release"])
+//                groupId = "com.github.sans16"
+//                artifactId = "androidlibrary"
+//                version = "3.0.1"
             }
         }
     }

@@ -40,15 +40,15 @@ class MainActivity : ComponentActivity() {
                 }
             }
 
-            ShakeInputModal(
-                showModal = showModal,
-                onDismiss = { showModal = false },
-                onSubmit = { text ->
-                    Log.d("MainActivity", "User submitted: $text")
-                    sdk.disableShakeGesture()  // Optionally disable shake after text submission
-                    showModal = false  // Hide the modal
-                }
-            )
+//            ShakeInputModal(
+//                showModal = showModal,
+//                onDismiss = { showModal = false },
+//                onSubmit = { text ->
+//                    Log.d("MainActivity", "User submitted: $text")
+//                    sdk.disableShakeGesture()  // Optionally disable shake after text submission
+//                    showModal = false  // Hide the modal
+//                }
+//            )
         }
     }
 
