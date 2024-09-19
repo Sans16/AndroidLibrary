@@ -39,7 +39,7 @@ android {
         jvmTarget = "17"
     }
 }
-version = "2.0.0"
+version = "3.0.1"
 
 dependencies {
    // implementation(libs.androidx.core.ktx)
@@ -71,7 +71,7 @@ afterEvaluate{
                 from(components["release"])
                 groupId = "com.github.sans16"
                 artifactId = "androidlibrary"
-                version = "0.0.2"
+                version = "3.0.1"
             }
         }
     }
