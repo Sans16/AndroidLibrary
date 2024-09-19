@@ -5,6 +5,7 @@ import io.netty.util.ReferenceCountUtil.release
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.compose.compiler)
     id("maven-publish")
 
     //alias(libs.plugins.maven.library)
