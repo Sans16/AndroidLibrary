@@ -73,10 +73,10 @@ afterEvaluate{
     publishing {
         publications {
             create<MavenPublication>("release") {
-//                from(components["release"])
-//                groupId = "com.github.sans16"
-//                artifactId = "androidlibrary"
-//                version = "3.0.1"
+               // from(components["release"])
+                groupId = "com.github.sans16"
+                artifactId = "androidlibrary"
+                version = "3.0.1"
             }
         }
     }
