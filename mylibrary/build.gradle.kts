@@ -41,7 +41,7 @@ android {
 version = "2.0.0"
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
+   // implementation(libs.androidx.core.ktx)
    // implementation(libs.androidx.appcompat)
     //implementation(libs.material)
    // testImplementation(libs.junit)
@@ -66,15 +66,11 @@ dependencies {
 afterEvaluate{
     publishing {
         publications {
-            register<MavenPublication>("release") {
-             //   from(components["release"])
-                groupId = "com.github.sans"
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.sans16"
                 artifactId = "androidlibrary"
-                version = "0.0.1"
-
-                afterEvaluate{
-                    from(components["release"])
-                }
+                version = "0.0.2"
             }
         }
     }
